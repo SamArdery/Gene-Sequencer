@@ -1,5 +1,7 @@
 #include <iostream>
 #include <fstream>
+#include <string>
+#include <vector>
 #ifndef ALLELE_H
 #define ALLELE_H
 
@@ -15,8 +17,8 @@ class Allele
   public:
 	Allele();
 	Allele(string, string, string);
-	void WriteAlleleToFile(ofstream &);
-	void SetAllele();
+	void WriteAlleleToFile(ifstream);
+	void SetAllele(vector<string> GeneToBeWritten(8));
 	void GetAllele();
 	bool RunUnitTest();
 };
