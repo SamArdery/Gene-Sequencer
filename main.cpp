@@ -13,11 +13,11 @@ using namespace std;
 void PrintMenu(int &x)
 {
 	cout << endl;
-	cout << "1 - Create Chromotid" << endl;
-	cout << "2 - Analyze Chromotid" << endl;
-	cout << "3 - Output Chromotid to file" << endl;
-	cout << "4 - Input Chromotid from file" << endl;
-	cout << "5 - Combine Two Chromotids" << endl;
+	cout << "1 - Create Chromosome" << endl;
+	cout << "2 - Analyze Chromosome" << endl;
+	cout << "3 - Output Chromosome to file" << endl;
+	cout << "4 - Input Chromosome from file" << endl;
+	cout << "5 - Combine Two Chromosomes" << endl;
 	cout << "6 - Exit" << endl;
 	cout << endl;
 }
@@ -29,20 +29,18 @@ int main(int argc, char *argv[])
 
 	while (userChoice > 0 || userChoice < 7)
 	{
-		Allele userAllele;
-		vector<string> alleleInput(8);
 		PrintMenu(userChoice);
 		cin >> userChoice;
 		switch (userChoice)
 		{
 		case 1:
-			userAllele.SetAllele(string v, string t, string s);
+
 			break;
 		case 2:
-			userAllele.GetAllele();
+
 			break;
 		case 3:
-			userAllele.WriteAlleleToFile();
+
 			break;
 		case 4:
 

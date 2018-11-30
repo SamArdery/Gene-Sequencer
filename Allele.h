@@ -10,16 +10,16 @@ using namespace std;
 class Allele
 {
   private:
-	string nucleotideSeqence;
+	string nucleotideSequence;
 	string variantName;
 	string variantType;
 
   public:
 	Allele();
 	Allele(string, string, string);
-	void WriteAlleleToFile(ifstream);
-	void SetAllele(vector<string> GeneToBeWritten(8));
+	void SetAllele(string, string, string);
 	void GetAllele();
+	void WriteAlleleToFile(ofstream &);
 	bool RunUnitTest();
 };
 

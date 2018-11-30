@@ -24,6 +24,7 @@ void Allele::SetAllele(string v, string t, string s)
 void Allele::GetAllele()
 {
 }
-void Allele::WriteAlleleToFile()
+void Allele::WriteAlleleToFile(ofstream &write)
 {
+	write << v << ", " << t << ", " << s << ", ";
 }
