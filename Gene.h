@@ -19,7 +19,7 @@ class Gene
   public:
 	Gene();
 	Gene(Allele x, Allele y);
-	void SetGene(string, string);
+	void SetGene(string n, string trait);
 	void GetGene();
 	void WriteGeneToFile(ofstream &);
 };

@@ -16,15 +16,18 @@ void Allele::SetAllele(string v, string t, string s)
 	cout << "For the following steps, please use hyphens(-) instead of spaces" << endl;
 	cout << "Please input allele name: ";
 	cin >> v;
+	this->variantName = v;
 	cout << "Please input allele type: ";
 	cin >> t;
+	this->variantType = t;
 	cout << "Please input allele sequence: ";
 	cin >> s;
+	this->nucleotideSequence = s;
 }
 void Allele::GetAllele()
 {
+	cout << this->variantName << ", " << this->variantType << "," << this->nucleotideSequence;
 }
 void Allele::WriteAlleleToFile(ofstream &write)
 {
-	write << v << ", " << t << ", " << s << ", ";
-}
+	write << this->variantName << ", " << this->variantType << ", " << this->nucleotideSequence << ", ";
