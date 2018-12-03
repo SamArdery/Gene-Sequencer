@@ -7,6 +7,8 @@
 
 using namespace std;
 
+Gene::Gene() {}
+
 Gene::Gene(Allele m, Allele f)
 {
 	this->alleleM = m;
@@ -22,13 +24,18 @@ void Gene::SetGene(string n, string trait)
 	cout << "Please enter gene trait: ";
 	cin >> trait;
 	this->traitType = trait;
-	alleleM.SetAllele(string v, string t, string s);
-	alleleF.SetAllele(string v, string t, string s);
+	string v, t, s;
+	alleleM.SetAllele(v, t, s);
+	alleleF.SetAllele(v, t, s);
 }
 
 void Gene::GetGene()
 {
-	cout << this->geneName << ", " << this->traitType << ", " << alleleM.GetAllele << ", " << alleleF.GetAllele;
+	cout << this->geneName << ", " << this->traitType << ", ";
+	alleleM.GetAllele();
+	cout << ", ";
+	alleleF.GetAllele();
+	cout << endl;
 }
 
 void Gene::WriteGeneToFile(ofstream &write)

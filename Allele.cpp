@@ -5,6 +5,9 @@
 #include "Allele.h"
 
 using namespace std;
+
+Allele::Allele() {}
+
 Allele::Allele(string v, string t, string s)
 {
 	this->variantName = v;
@@ -31,3 +34,4 @@ void Allele::GetAllele()
 void Allele::WriteAlleleToFile(ofstream &write)
 {
 	write << this->variantName << ", " << this->variantType << ", " << this->nucleotideSequence << ", ";
+}

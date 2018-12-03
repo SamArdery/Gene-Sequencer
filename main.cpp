@@ -6,7 +6,11 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <vector>
 #include "Allele.h"
+#include "Gene.h"
+#include "Chromosome.h"
+#include "Sequencer.h"
 
 using namespace std;
 
@@ -31,29 +35,43 @@ int main(int argc, char *argv[])
 	{
 		PrintMenu(userChoice);
 		cin >> userChoice;
-		switch (userChoice)
+		if (userChoice == 1)
 		{
-		case 1:
-
+			char userChar = 'Y';
+			int chrNum;
+			while (userChar == 'Y')
+			{
+				cout << "Please enter chromosome number: ";
+				cin >> chrNum;
+				Gene geneNum;
+				string n, trait;
+				geneNum.SetGene(n, trait);
+				Chromosome chrNum;
+				chrNum.AddGene(geneNum);
+				cout << "Would you like to add another gene? Enter Y for yes and N for no: ";
+				cin >> userChar;
+			}
+		}
+		else if (userChoice == 2)
+		{
+		}
+		else if (userChoice == 3)
+		{
+		}
+		else if (userChoice == 4)
+		{
+		}
+		else if (userChoice == 5)
+		{
+		}
+		else if (userChoice == 6)
+		{
+			cout << "Goodbye." << endl;
 			break;
-		case 2:
-
-			break;
-		case 3:
-
-			break;
-		case 4:
-
-			break;
-		case 5:
-
-			break;
-		case 6:
-
-			break;
-		default:
+		}
+		else
+		{
 			cout << "Invalid input, please try again." << endl;
-			break;
 		}
 	}
 
