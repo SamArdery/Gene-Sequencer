@@ -30,6 +30,8 @@ int main(int argc, char *argv[])
 
 {
 	int userChoice = 1;
+	Chromosome chrNum;
+	Gene geneNum;
 
 	while (userChoice > 0 || userChoice < 7)
 	{
@@ -40,10 +42,8 @@ int main(int argc, char *argv[])
 			char userChar = 'Y';
 			while (userChar == 'Y')
 			{
-				Gene geneNum;
 				string n, trait;
 				geneNum.SetGene(n, trait);
-				Chromosome chrNum;
 				chrNum.AddGene(geneNum);
 				cout << "Would you like to add another gene? Enter Y for yes and N for no: ";
 				cin >> userChar;
@@ -51,17 +51,24 @@ int main(int argc, char *argv[])
 		}
 		else if (userChoice == 2)
 		{
+			geneNum.OutputDominant();
+			cout << endl;
 		}
 		else if (userChoice == 3)
 		{
 			ofstream write;
 			write.open("chromosomes.txt");
-			Chromosome chrNum;
 			chrNum.WriteChromosomeToFile(write);
 			write.close();
+			cout << "Chromosome has been output to file" << endl;
 		}
 		else if (userChoice == 4)
 		{
+			ifstream write;
+			write.open("chromosomes.txt");
+			chrNum.InputChromosome();
+			write.close();
+			cout << "Chromosome has been input from file" << endl;
 		}
 		else if (userChoice == 5)
 		{

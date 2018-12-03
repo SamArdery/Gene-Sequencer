@@ -21,3 +21,20 @@ void Chromosome::WriteChromosomeToFile(ofstream &write)
 		genes.at(i).WriteGeneToFile(write);
 	}
 }
+
+void Chromosome::InputChromosome()
+{
+	string line;
+	ifstream write;
+	while (getline(write, line))
+	{
+		int position = line.find(",");
+		string geneName = line.substr(0, position);
+		line.erase(position);
+		position = line.find(",");
+		Gene tempGene;
+		string test = "test";
+		tempGene.SetGene(geneName, test);
+		genes.push_back(tempGene);
+	}
+}

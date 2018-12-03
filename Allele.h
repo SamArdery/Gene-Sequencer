@@ -20,6 +20,7 @@ class Allele
 	void SetAllele(string, string, string);
 	void GetAllele();
 	void WriteAlleleToFile(ofstream &);
+	void GetDominantAllele();
 	bool RunUnitTest();
 };
 

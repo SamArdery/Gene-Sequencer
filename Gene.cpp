@@ -44,3 +44,10 @@ void Gene::WriteGeneToFile(ofstream &write)
 	this->alleleM.WriteAlleleToFile(write);
 	this->alleleF.WriteAlleleToFile(write);
 }
+
+void Gene::OutputDominant()
+{
+	cout << this->geneName << ", " << this->traitType << ", ";
+	this->alleleM.GetDominantAllele();
+	this->alleleF.GetDominantAllele();
+}

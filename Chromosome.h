@@ -17,6 +17,7 @@ class Chromosome
 	Chromosome();
 	void AddGene(Gene g);
 	void WriteChromosomeToFile(ofstream &);
+	void InputChromosome();
 };
 
 #endif

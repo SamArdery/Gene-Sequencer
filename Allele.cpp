@@ -38,7 +38,7 @@ void Allele::WriteAlleleToFile(ofstream &write)
 
 void Allele::GetDominantAllele()
 {
-	if (this->variantType = 'D' || this->variantType = 'd' || this->variantType = "Dominant" || this->variantType = "dominant")
+	if (this->variantType == "Dominant")
 	{
 		cout << this->variantName << ", " << this->variantType << ", " << this->nucleotideSequence;
 	}

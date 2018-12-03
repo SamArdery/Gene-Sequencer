@@ -22,6 +22,7 @@ class Gene
 	void SetGene(string n, string trait);
 	void GetGene();
 	void WriteGeneToFile(ofstream &);
+	void OutputDominant();
 };
 
 #endif
