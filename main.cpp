@@ -38,11 +38,8 @@ int main(int argc, char *argv[])
 		if (userChoice == 1)
 		{
 			char userChar = 'Y';
-			int chrNum;
 			while (userChar == 'Y')
 			{
-				cout << "Please enter chromosome number: ";
-				cin >> chrNum;
 				Gene geneNum;
 				string n, trait;
 				geneNum.SetGene(n, trait);
@@ -57,6 +54,11 @@ int main(int argc, char *argv[])
 		}
 		else if (userChoice == 3)
 		{
+			ofstream write;
+			write.open("chromosomes.txt");
+			Chromosome chrNum;
+			chrNum.WriteChromosomeToFile(write);
+			write.close();
 		}
 		else if (userChoice == 4)
 		{
