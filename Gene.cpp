@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <ctime>
 #include "Allele.h"
 #include "Gene.h"
 
@@ -50,4 +51,19 @@ void Gene::OutputDominant()
 	cout << this->geneName << ", " << this->traitType << ", ";
 	this->alleleM.GetDominantAllele();
 	this->alleleF.GetDominantAllele();
+}
+
+void ChooseRandomAllele()
+{
+	int randomNum = (rand() % 2) + 1;
+	if (randomNum = 1)
+	{
+		cout << this->geneName << ", " << this->traitType << ", ";
+		this->alleleM.GetAllele();
+	}
+	else
+	{
+		cout << this->geneName << ", " << this->traitType << ", ";
+		this->alleleF.GetAllele();
+	}
 }

@@ -23,6 +23,7 @@ class Gene
 	void GetGene();
 	void WriteGeneToFile(ofstream &);
 	void OutputDominant();
+	void ChooseRandomAllele();
 };
 
 #endif

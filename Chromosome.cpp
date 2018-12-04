@@ -38,3 +38,8 @@ void Chromosome::InputChromosome()
 		genes.push_back(tempGene);
 	}
 }
+
+Chromosome Chromosome::operator+(Chromosome rhs)
+{
+	genes.ChooseRandomAllele();
+}

@@ -30,7 +30,9 @@ int main(int argc, char *argv[])
 
 {
 	int userChoice = 1;
-	Chromosome chrNum;
+	int chrmsmNum;
+	Chromosome chrNum1;
+	Chromosome chrNum2;
 	Gene geneNum;
 
 	while (userChoice > 0 || userChoice < 7)
@@ -44,7 +46,16 @@ int main(int argc, char *argv[])
 			{
 				string n, trait;
 				geneNum.SetGene(n, trait);
-				chrNum.AddGene(geneNum);
+				cout << "Would you like to add to the first or second chromosome? Enter 1 or 2.";
+				cin >> chrmsmNum;
+				if (chrmsmNum = 1)
+				{
+					chrNum1.AddGene(geneNum);
+				}
+				else
+				{
+					chrNum2.AddGene(geneNum);
+				}
 				cout << "Would you like to add another gene? Enter Y for yes and N for no: ";
 				cin >> userChar;
 			}
@@ -57,21 +68,28 @@ int main(int argc, char *argv[])
 		else if (userChoice == 3)
 		{
 			ofstream write;
-			write.open("chromosomes.txt");
-			chrNum.WriteChromosomeToFile(write);
+			write.open("chromosomes1.txt");
+			chrNum1.WriteChromosomeToFile(write);
+			write.close();
+			write.open("chromosomes2.txt");
+			chrNum2.WriteChromosomeToFile(write);
 			write.close();
 			cout << "Chromosome has been output to file" << endl;
 		}
 		else if (userChoice == 4)
 		{
 			ifstream write;
-			write.open("chromosomes.txt");
-			chrNum.InputChromosome();
+			write.open("chromosomes1.txt");
+			chrNum1.InputChromosome();
+			write.close();
+			write.open("chromsomes2.txt");
+			chrNum2.InputChromosome();
 			write.close();
 			cout << "Chromosome has been input from file" << endl;
 		}
 		else if (userChoice == 5)
 		{
+			Chromosome chrNum3 = chrNum1 + chrNum2;
 		}
 		else if (userChoice == 6)
 		{

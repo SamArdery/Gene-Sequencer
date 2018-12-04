@@ -18,6 +18,7 @@ class Chromosome
 	void AddGene(Gene g);
 	void WriteChromosomeToFile(ofstream &);
 	void InputChromosome();
+	Chromosome operator+(Chromosome rhs);
 };
 
 #endif
