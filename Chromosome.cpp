@@ -41,5 +41,9 @@ void Chromosome::InputChromosome()
 
 Chromosome Chromosome::operator+(Chromosome rhs)
 {
-	genes.ChooseRandomAllele();
+
+	for (unsigned int i = 0; i < genes.size(); i++)
+	{
+		genes.at(i).ChooseRandomAllele();
+	}
 }
